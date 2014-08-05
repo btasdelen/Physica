@@ -1,0 +1,16 @@
+Description:
+Physica is a 2D physics simulation which allow user to experience the real
+ world physiscs. The main goal of the game is reaching red flag with a red
+ ball. While doing this, user can draw simple objects to collide to move the
+ ball, use these objects as a bridge, wall or they can directly apply force
+ on the ball by clicking on it.
+
+How to setup:
+Our program tested on Eclipse Juno. It is cross platform and tested on Linux Mint 17,
+Windows 7 and Windows 8. A working Eclipse Juno will do the trick. Our program needs a strong cpu to run smoothly.
+
+
+What is working:
+The program almost complete. There are few bugs. And options not entirely implemented yet. More stages will be added. 
+If time permits, sounds and some settings element will be implemented.
+
