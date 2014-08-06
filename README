@@ -7,10 +7,9 @@ Physica is a 2D physics simulation which allow user to experience the real
 
 How to setup:
 Our program tested on Eclipse Juno. It is cross platform and tested on Linux Mint 17,
-Windows 7 and Windows 8. A working Eclipse Juno will do the trick. Our program needs a strong cpu to run smoothly.
+Windows 7 and Windows 8. A working Eclipse Juno will do the trick. Just import project. 
 
 
 What is working:
-The program almost complete. There are few bugs. And options not entirely implemented yet. More stages will be added. 
-If time permits, sounds and some settings element will be implemented.
-
+There are few bugs and i think performance is poor. And options not entirely implemented yet.
+More stages and sounds will be added. And i am not sure about if Swing is sufficient.
