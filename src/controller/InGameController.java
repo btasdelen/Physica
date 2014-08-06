@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import stages.Stage;
 import view.InGamePanel;
+import view.TimeLabelView;
 import model.GameObject;
 
 /**
@@ -16,11 +17,19 @@ public class InGameController implements ActionListener{
 	
 	private InGamePanel panel;
 	private Stage stage;
-	
-	public InGameController(InGamePanel inGamePanel, Stage st)
+	private TimeLabelView view;
+	private int min;
+	private int sec;
+	private int ms;
+
+	public InGameController(InGamePanel inGamePanel, Stage st, TimeLabelView view)
 	{
 		stage = st;
 		this.panel = inGamePanel;
+		this.view = view;
+		min = 0;
+		sec = 0;
+		ms = 0;
 	}
 	
 	// Add object
@@ -35,7 +44,7 @@ public class InGameController implements ActionListener{
 	public void actionPerformed(ActionEvent e) 
 	{
 		boolean isMainReplaced = false;
-		float timeStep = 1.0f / 60.f;
+		float timeStep = 1.0f / 30.f;
 		int velocityIterations = 6;
 		int positionIterations = 2;
 		stage.getWorldController().getWorld().step(timeStep, velocityIterations, positionIterations);
@@ -70,8 +79,34 @@ public class InGameController implements ActionListener{
 				}
 		}
 		
+		//update the time view
+		if( !view.isPaused()) {
+			incrementTime();
+			view.setTime(min, sec);
+		}
+		
 		// Repaint screen
 		panel.repaint();
 	}
+	
+	public void incrementTime() {
+		//increment second and then check if necessary to increment label
+		ms += 1;
+
+		if ( ms == 60) {
+			sec++;
+			ms = 0;
+		}
+		if (sec == 60){
+			min++;
+			sec = 0;
+		}
+	}
+	
+	public void resetTime() {
+		min = 0;
+		sec = 0;
+	}
+	
 
 }

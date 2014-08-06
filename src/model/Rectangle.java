@@ -20,11 +20,11 @@ import org.jbox2d.dynamics.BodyType;
 public class Rectangle extends GameObject {
 	
 	
-	private float width;
+	protected float width;
 	
-	private float length;
+	protected float length;
 	
-	private PolygonShape rs;
+	protected PolygonShape rs;
 	
 	
 	public Rectangle(Vec2 p, float w, float l, Color colour, BodyType t) {
@@ -62,7 +62,7 @@ public class Rectangle extends GameObject {
 	
 	@Override
 	public java.awt.Shape gShape() {
-		//Rectangle's angle matter. So we creating shape by transforming it
+		//Rectangle's angle matters. So we creating shape by transforming it
 		shape = new Rectangle2D.Float(boxToSwingX(pos.x-swingToBoxWidth(width)), boxToSwingY(pos.y+swingToBoxHeight(length)), width, length);
 		AffineTransform at = new AffineTransform();
         at.rotate(-getAngle(), boxToSwingX(pos.x-swingToBoxWidth(width))+width/2, boxToSwingY(pos.y+swingToBoxHeight(length))+length/2);

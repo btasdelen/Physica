@@ -39,7 +39,7 @@ public class OptionsPanel extends JPanel {
 		slider.setOpaque(false);
 		add(slider);
 		
-		JCheckBox checkBox = new JCheckBox("");
+		JCheckBox checkBox = new JCheckBox("Anti Aliasing");
 		checkBox.setForeground(new Color(255, 0, 0));
 		checkBox.setBackground(new Color(204, 0, 0));
 		checkBox.setBounds(9*(SCREEN_WIDTH/20), 5*(SCREEN_HEIGHT/9), 29, 35);

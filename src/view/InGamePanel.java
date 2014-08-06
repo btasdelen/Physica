@@ -93,7 +93,7 @@ public class InGamePanel extends JPanel {
 		requestFocusInWindow();
 
 		//set timer and start
-		time = new Timer(5, new InGameController( this, st));
+		time = new Timer(10, new InGameController( this, st, timeLabel));
 		time.start();
 
 	}
@@ -103,7 +103,6 @@ public class InGamePanel extends JPanel {
 		super.paintComponent(g);
 		
 		//render background image and finish flag
-
 		g.drawImage(backgroundImage, 0, 0, null);
 		g.drawImage(st.getFlag().getTexture(), (int)GameObject.boxToSwingX((st.getFlag().getPos()).x), 
 				(int)GameObject.boxToSwingY((st.getFlag().getPos()).y), null);

@@ -45,7 +45,7 @@ public class MainPanel extends JPanel {
 		btn1.setForeground(new Color(255, 255, 255));
 		btn1.setFont(new Font("TEN O CLOCK", Font.PLAIN, SCREEN_WIDTH/35));
 		btn1.setBounds(SCREEN_WIDTH/15, SCREEN_HEIGHT/10, SCREEN_WIDTH/5, SCREEN_HEIGHT/10);
-		btn1.setOpaque(true);
+		btn1.setOpaque(false);
 		add(btn1);
 		
 		JButton btn2 = new JButton("Hints");
@@ -53,7 +53,7 @@ public class MainPanel extends JPanel {
 		btn2.setForeground(new Color(255, 255, 255));
 		btn2.setFont(new Font("TEN O CLOCK", Font.PLAIN, SCREEN_WIDTH/35));
 		btn2.setBounds(SCREEN_WIDTH/15, 3*(SCREEN_HEIGHT/10), SCREEN_WIDTH/5, SCREEN_HEIGHT/10);
-		btn2.setOpaque(true);
+		btn2.setOpaque(false);
 		add(btn2);
 		
 		JButton btn3 = new JButton("Options");
@@ -61,7 +61,7 @@ public class MainPanel extends JPanel {
 		btn3.setFont(new Font("TEN O CLOCK", Font.PLAIN, SCREEN_WIDTH/35));
 		btn3.setForeground(new Color(255, 255, 255));
 		btn3.setBounds(SCREEN_WIDTH/15, 5*(SCREEN_HEIGHT/10), SCREEN_WIDTH/5, SCREEN_HEIGHT/10);
-		btn3.setOpaque(true);
+		btn3.setOpaque(false);
 		add(btn3);
 		
 		JButton btn4 = new JButton("Quit");
@@ -69,7 +69,7 @@ public class MainPanel extends JPanel {
 		btn4.setForeground(new Color(204, 0, 51));
 		btn4.setFont(new Font("TEN O CLOCK", Font.PLAIN, SCREEN_WIDTH/35));
 		btn4.setBounds(SCREEN_WIDTH/15, 7*(SCREEN_HEIGHT/10), SCREEN_WIDTH/5, SCREEN_HEIGHT/10);
-		btn4.setOpaque(true);
+		btn4.setOpaque(false);
 		add(btn4);
 		
 		JLabel background = new JLabel("");

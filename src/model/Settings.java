@@ -17,10 +17,11 @@ public class Settings {
 	private Color fontColor;
 	private ImageIcon background;
 	private int audioVolume;
+	private boolean antiAlias;
 	
 	public Settings()
 	{
-
+		antiAlias = true;
 		fontSize = 24;
 		font = new Font( "Times New Roman", Font.PLAIN, fontSize);
 		fontColor = new Color( 0, 0, 0);
@@ -59,4 +60,8 @@ public class Settings {
 		this.audioVolume = audioVolume;
 	}
 	
+	public boolean antiAlias(boolean aa){
+		antiAlias = aa;
+		return antiAlias;
+	}
 }
